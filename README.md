@@ -38,7 +38,7 @@ CountrySelect::make('Country', 'county_code')->onlyContinents(['EU', 'AS'])
  ```php
 use Enmaboya\CountrySelect\CountrySelect;
 	
-CountrySelect::make('Country', 'county_code')->except(['SA', 'NA', 'OC'])
+CountrySelect::make('Country', 'county_code')->exceptContinents(['SA', 'NA', 'OC'])
 ```
 
 Available list of continents:
