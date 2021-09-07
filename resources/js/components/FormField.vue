@@ -52,12 +52,8 @@
             }
         },
 
-        mounted() {
-            setTimeout(() => {
-                Nova.$emit(this.field.attribute + "-link-place", {
-                    country: this.value
-                })
-            }, 0);
+        updated() {
+            Nova.$emit(this.field.attribute + "-change", this.value);
         },
 
         methods: {
@@ -103,9 +99,7 @@
                 this.value = e.target.value;
 
                 if (this.field) {
-                    Nova.$emit(this.field.attribute + "-link-change", {
-                        country: this.value
-                    });
+                    Nova.$emit(this.field.attribute + "-change", this.value);
                 }
             },
         },
